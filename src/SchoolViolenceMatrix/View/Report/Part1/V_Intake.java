@@ -40,8 +40,8 @@ public class V_Intake extends JPanel
    */
   private V_Intake()
   { 
-    this.chkDays = new JCheckBox[Integer.parseInt(MANAGER.getString("DAYS_CHK"))];
-    this.chkTimes = new JCheckBox[Integer.parseInt(MANAGER.getString("TIMES_CHK"))];
+    this.chkDaysOfWeek = new JCheckBox[Integer.parseInt(MANAGER.getString("CHK_DAYS"))];
+    this.chkTimesOfDay = new JCheckBox[Integer.parseInt(MANAGER.getString("CHK_TIMES"))];
     initComponents();
     initLayout();
   }
@@ -82,29 +82,29 @@ public class V_Intake extends JPanel
   private void initLabels()
   {
     lblDateReported = FACTORY.createLabel(
-      MANAGER.getString("DATE_REP_LBL"), 
-      Integer.parseInt(MANAGER.getString("DATE_REP_LBL_XSIZE")), 
-      Integer.parseInt(MANAGER.getString("GLOBAL_LBL_YSIZE")));
+      MANAGER.getString("LBL_DATE_REP"), 
+      Integer.parseInt(MANAGER.getString("LBL_DATE_REP_XSIZE")), 
+      Integer.parseInt(MANAGER.getString("LBL_GLOBAL_YSIZE")));
     lblDayOfWeek = FACTORY.createLabel(
-      MANAGER.getString("DAY_LBL"), 
-      Integer.parseInt(MANAGER.getString("DAY_LBL_XSIZE")), 
-      Integer.parseInt(MANAGER.getString("GLOBAL_LBL_YSIZE")));
+      MANAGER.getString("LBL_DAY"), 
+      Integer.parseInt(MANAGER.getString("LBL_DAY_XSIZE")), 
+      Integer.parseInt(MANAGER.getString("LBL_GLOBAL_YSIZE")));
     lblTime = FACTORY.createLabel(
-      MANAGER.getString("TIME_LBL"),
-      Integer.parseInt(MANAGER.getString("TIME_LBL_XSIZE")),
-      Integer.parseInt(MANAGER.getString("GLOBAL_LBL_YSIZE")));
+      MANAGER.getString("LBL_TIME"),
+      Integer.parseInt(MANAGER.getString("LBL_TIME_XSIZE")),
+      Integer.parseInt(MANAGER.getString("LBL_GLOBAL_YSIZE")));
     lblTakenBy = FACTORY.createLabel(
-      MANAGER.getString("TAKEN_BY_LBL"),
-      Integer.parseInt(MANAGER.getString("TAKEN_BY_LBL_XSIZE")),
-      Integer.parseInt(MANAGER.getString("GLOBAL_LBL_YSIZE")));
+      MANAGER.getString("LBL_TAKEN_BY"),
+      Integer.parseInt(MANAGER.getString("LBL_TAKEN_BY_XSIZE")),
+      Integer.parseInt(MANAGER.getString("LBL_GLOBAL_YSIZE")));
     lblSchool = FACTORY.createLabel(
-      MANAGER.getString("SCHOOL_LBL"),
-      Integer.parseInt(MANAGER.getString("SCHOOL_LBL_XSIZE")),
-      Integer.parseInt(MANAGER.getString("GLOBAL_LBL_YSIZE")));
+      MANAGER.getString("LBL_SCHOOL"),
+      Integer.parseInt(MANAGER.getString("LBL_SCHOOL_XSIZE")),
+      Integer.parseInt(MANAGER.getString("LBL_GLOBAL_YSIZE")));
     lblPosition = FACTORY.createLabel(
-      MANAGER.getString("POSITION_LBL"),
-      Integer.parseInt(MANAGER.getString("POSITION_LBL_XSIZE")),
-      Integer.parseInt(MANAGER.getString("GLOBAL_LBL_YSIZE")));
+      MANAGER.getString("LBL_POSITION"),
+      Integer.parseInt(MANAGER.getString("LBL_POSITION_XSIZE")),
+      Integer.parseInt(MANAGER.getString("LBL_GLOBAL_YSIZE")));
   }
   
   /**
@@ -113,20 +113,20 @@ public class V_Intake extends JPanel
   private void initTextFields()
   {
     txtDateReported = FACTORY.createTextField(
-      Integer.parseInt(MANAGER.getString("DATE_REP_TXT_XSIZE")), 
-      Integer.parseInt(MANAGER.getString("GLOBAL_TXT_YSIZE")));
+      Integer.parseInt(MANAGER.getString("TXT_DATE_REP_XSIZE")), 
+      Integer.parseInt(MANAGER.getString("TXT_GLOBAL_YSIZE")));
     txtTime = FACTORY.createTextField(
-      Integer.parseInt(MANAGER.getString("TIME_TXT_XSIZE")),
-      Integer.parseInt(MANAGER.getString("GLOBAL_TXT_YSIZE")));
+      Integer.parseInt(MANAGER.getString("TXT_TIME_XSIZE")),
+      Integer.parseInt(MANAGER.getString("TXT_GLOBAL_YSIZE")));
     txtTakenBy = FACTORY.createTextField(
-      Integer.parseInt(MANAGER.getString("TAKEN_BY_TXT_XSIZE")),
-      Integer.parseInt(MANAGER.getString("GLOBAL_TXT_YSIZE")));
+      Integer.parseInt(MANAGER.getString("TXT_TAKEN_BY_XSIZE")),
+      Integer.parseInt(MANAGER.getString("TXT_GLOBAL_YSIZE")));
     txtSchool = FACTORY.createTextField(
-      Integer.parseInt(MANAGER.getString("SCHOOL_TXT_XSIZE")),
-      Integer.parseInt(MANAGER.getString("GLOBAL_TXT_YSIZE")));
+      Integer.parseInt(MANAGER.getString("TXT_SCHOOL_XSIZE")),
+      Integer.parseInt(MANAGER.getString("TXT_GLOBAL_YSIZE")));
     txtPosition = FACTORY.createTextField(
-      Integer.parseInt(MANAGER.getString("POSITION_TXT_XSIZE")),
-      Integer.parseInt(MANAGER.getString("GLOBAL_TXT_YSIZE")));
+      Integer.parseInt(MANAGER.getString("TXT_POSITION_XSIZE")),
+      Integer.parseInt(MANAGER.getString("TXT_GLOBAL_YSIZE")));
   }
   
   /**
@@ -134,18 +134,18 @@ public class V_Intake extends JPanel
    */
   private void initCheckBoxes()
   {
-    chkDays[0] = FACTORY.createCheckBox(MANAGER.getString("MON_CHK"));
-    chkDays[1] = FACTORY.createCheckBox(MANAGER.getString("TUE_CHK"));
-    chkDays[2] = FACTORY.createCheckBox(MANAGER.getString("WED_CHK"));
-    chkDays[3] = FACTORY.createCheckBox(MANAGER.getString("THU_CHK"));
-    chkDays[4] = FACTORY.createCheckBox(MANAGER.getString("FRI_CHK"));
-    chkDays[5] = FACTORY.createCheckBox(MANAGER.getString("SAT_CHK"));
-    chkDays[6] = FACTORY.createCheckBox(MANAGER.getString("SUN_CHK"));  
-    chkTimes[0] = FACTORY.createCheckBox(MANAGER.getString("AM_CHK"));
-    chkTimes[1] = FACTORY.createCheckBox(MANAGER.getString("PM_CHK"));
+    chkDaysOfWeek[0] = FACTORY.createCheckBox(MANAGER.getString("CHK_MON"));
+    chkDaysOfWeek[1] = FACTORY.createCheckBox(MANAGER.getString("CHK_TUE"));
+    chkDaysOfWeek[2] = FACTORY.createCheckBox(MANAGER.getString("CHK_WED"));
+    chkDaysOfWeek[3] = FACTORY.createCheckBox(MANAGER.getString("CHK_THU"));
+    chkDaysOfWeek[4] = FACTORY.createCheckBox(MANAGER.getString("CHK_FRI"));
+    chkDaysOfWeek[5] = FACTORY.createCheckBox(MANAGER.getString("CHK_SAT"));
+    chkDaysOfWeek[6] = FACTORY.createCheckBox(MANAGER.getString("CHK_SUN"));  
+    chkTimesOfDay[0] = FACTORY.createCheckBox(MANAGER.getString("CHK_AM"));
+    chkTimesOfDay[1] = FACTORY.createCheckBox(MANAGER.getString("CHK_PM"));
     
-    initSelectionListeners(chkDays);
-    initSelectionListeners(chkTimes);
+    initSelectionListeners(chkDaysOfWeek);
+    initSelectionListeners(chkTimesOfDay);
   }
   
   /**
@@ -183,16 +183,16 @@ public class V_Intake extends JPanel
         .addComponent(lblSchool))
         .addGroup(layout.createParallelGroup(Alignment.LEADING)
           .addGroup(layout.createSequentialGroup()
-          .addComponent(chkDays[0])
-          .addComponent(chkDays[1])
-          .addComponent(chkDays[2])
-          .addComponent(chkDays[3])
-          .addComponent(chkDays[4]))
+          .addComponent(chkDaysOfWeek[0])
+          .addComponent(chkDaysOfWeek[1])
+          .addComponent(chkDaysOfWeek[2])
+          .addComponent(chkDaysOfWeek[3])
+          .addComponent(chkDaysOfWeek[4]))
         .addComponent(txtSchool))
       .addGroup(layout.createParallelGroup(Alignment.LEADING)
-        .addComponent(chkDays[5]))
+        .addComponent(chkDaysOfWeek[5]))
       .addGroup(layout.createParallelGroup(Alignment.LEADING)
-        .addComponent(chkDays[6]))
+        .addComponent(chkDaysOfWeek[6]))
       .addGap(Integer.parseInt(MANAGER.getString("HORZ_GAP")))
       .addGroup(layout.createParallelGroup(Alignment.LEADING)
         .addComponent(lblTime)
@@ -200,8 +200,8 @@ public class V_Intake extends JPanel
         .addGroup(layout.createParallelGroup(Alignment.LEADING)
           .addGroup(layout.createSequentialGroup()
             .addComponent(txtTime)
-            .addComponent(chkTimes[0])
-            .addComponent(chkTimes[1]))
+            .addComponent(chkTimesOfDay[0])
+            .addComponent(chkTimesOfDay[1]))
           .addComponent(txtPosition))
       );
     
@@ -210,17 +210,17 @@ public class V_Intake extends JPanel
         .addComponent(lblDateReported)
         .addComponent(txtDateReported)
         .addComponent(lblDayOfWeek)
-        .addComponent(chkDays[0])
-        .addComponent(chkDays[1])
-        .addComponent(chkDays[2])
-        .addComponent(chkDays[3])
-        .addComponent(chkDays[4])
-        .addComponent(chkDays[5])
-        .addComponent(chkDays[6])
+        .addComponent(chkDaysOfWeek[0])
+        .addComponent(chkDaysOfWeek[1])
+        .addComponent(chkDaysOfWeek[2])
+        .addComponent(chkDaysOfWeek[3])
+        .addComponent(chkDaysOfWeek[4])
+        .addComponent(chkDaysOfWeek[5])
+        .addComponent(chkDaysOfWeek[6])
         .addComponent(lblTime)
         .addComponent(txtTime)
-        .addComponent(chkTimes[0])
-        .addComponent(chkTimes[1]))
+        .addComponent(chkTimesOfDay[0])
+        .addComponent(chkTimesOfDay[1]))
       .addGap(Integer.parseInt(MANAGER.getString("VERT_GAP")))
       .addGroup(layout.createParallelGroup(Alignment.BASELINE)
         .addComponent(lblTakenBy)
@@ -255,7 +255,7 @@ public class V_Intake extends JPanel
    */
   public String getDayOfWeek()
   {
-    for (JCheckBox day : chkDays)
+    for (JCheckBox day : chkDaysOfWeek)
       if (day.isSelected())
         return day.getText();
     
@@ -269,7 +269,7 @@ public class V_Intake extends JPanel
    */
   public void setDayOfWeek(String dayOfWeek)
   {     
-    for (JCheckBox day : chkDays)
+    for (JCheckBox day : chkDaysOfWeek)
       if (day.getText().equals(dayOfWeek))
         day.setSelected(true);
   }
@@ -297,7 +297,7 @@ public class V_Intake extends JPanel
    */
   public String getTimeOfDay()
   {
-    for (JCheckBox time : chkTimes)
+    for (JCheckBox time : chkTimesOfDay)
       if (time.isSelected())
         return time.getText();
     
@@ -311,7 +311,7 @@ public class V_Intake extends JPanel
    */
   public void setTimeOfDay(String timeOfDay)
   {
-    for (JCheckBox time : chkTimes)
+    for (JCheckBox time : chkTimesOfDay)
       if (time.getText().equals(timeOfDay))
         time.setSelected(true);
   }
@@ -375,10 +375,10 @@ public class V_Intake extends JPanel
     for (JTextField field : textFields)
       field.setEditable(true);
     
-    for (JCheckBox box : chkDays)
+    for (JCheckBox box : chkDaysOfWeek)
       box.setEnabled(true);
     
-    for (JCheckBox box : chkTimes)
+    for (JCheckBox box : chkTimesOfDay)
       box.setEnabled(true);
   }
   
@@ -393,10 +393,10 @@ public class V_Intake extends JPanel
     for (JTextField field : textFields)
       field.setEditable(false);
     
-    for (JCheckBox box : chkDays)
+    for (JCheckBox box : chkDaysOfWeek)
       box.setEnabled(false);
     
-    for (JCheckBox box : chkTimes)
+    for (JCheckBox box : chkTimesOfDay)
       box.setEnabled(false);
   }
   
@@ -416,6 +416,6 @@ public class V_Intake extends JPanel
   private JTextField txtTakenBy;
   private JTextField txtSchool;
   private JTextField txtPosition;
-  private final JCheckBox chkDays[];
-  private final JCheckBox chkTimes[];
+  private final JCheckBox chkDaysOfWeek[];
+  private final JCheckBox chkTimesOfDay[];
 }
